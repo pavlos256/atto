@@ -7,3 +7,7 @@ const IS_DARK_MODE = detectIsDarkMode();
 export function isDarkMode() {
     return IS_DARK_MODE;
 }
+
+export function getDisplayFactor() {
+    return 2;
+}

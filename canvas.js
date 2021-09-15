@@ -1,8 +1,12 @@
-export const DISP_WIDTH = 640;
-export const DISP_HEIGHT = 480;
+import * as theme from "./theme.js";
+
+const editorFactor = theme.getDisplayFactor();
+
+export const DISP_WIDTH = 640 * editorFactor;
+export const DISP_HEIGHT = 480 * editorFactor;
 export const DISP_SCALE_FACTOR = 2;
-export const TERM_COLS = 40;
-export const TERM_ROWS = 20;
+export const TERM_COLS = 40 * editorFactor;
+export const TERM_ROWS = 20 * editorFactor;
 export const CHAR_WIDTH = DISP_WIDTH / TERM_COLS;
 export const CHAR_HEIGHT = DISP_HEIGHT / TERM_ROWS;
 
