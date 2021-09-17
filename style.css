@@ -461,6 +461,10 @@ h1.reference a.comparators {
         --white: rgb(16, 16, 16);
     }
 
+    canvas {
+        background-color: var(--dark);
+    }
+
     a.card {
         color: var(--dark);
     }
