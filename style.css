@@ -15,8 +15,8 @@
     --pink: rgb(255, 71, 191);
     --yellow: rgb(252, 218, 63);
     --white: rgb(255, 255, 255);
-
-    --almostBlack: rgb(16, 16, 16);
+    --keywordBlack: black;
+    --keywordWhite: white;
 }
 
 * {
@@ -33,16 +33,9 @@ body {
     -webkit-print-color-adjust: exact;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--almostBlack);
-        color: var(--white);
-    }
-}
-
 body.fullscreen {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: black;
+    color: white;
 }
 
 body.notSupported {
@@ -62,12 +55,6 @@ canvas {
     position: absolute;
     background-color: #eeeeee;
     border-radius: 10px;
-}
-
-@media (prefers-color-scheme: dark) {
-    canvas {
-        background-color: var(--black);
-    }
 }
 
 body.fullscreen canvas {
@@ -196,7 +183,7 @@ code span.comment {
 }
 
 code span.keyword {
-    color: var(--white);
+    color: var(--keywordWhite);
     border-radius: 5px;
 }
 
@@ -210,7 +197,7 @@ code span.keyword.purple {
 
 code span.keyword.yellow {
     background-color: var(--yellow);
-    color: var(--black);
+    color: var(--keywordBlack);
 }
 
 code span.keyword.green {
@@ -227,13 +214,13 @@ code span.keyword.magenta {
 
 code span.function {
     background-color: var(--magenta);
-    color: var(--white);
+    color: var(--keywordWhite);
     border-radius: 5px;
 }
 
 code span.constant {
     background-color: var(--lightBlue);
-    color: var(--white);
+    color: var(--keywordWhite);
     border-radius: 5px;
 }
 
@@ -464,6 +451,22 @@ h1.reference a.comparators {
 @media (max-width: 500px) {
     img {
         max-width: 100%;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --black: rgb(255, 255, 255);
+        --lightGrey: rgb(32, 32, 32);
+        --white: rgb(16, 16, 16);
+    }
+
+    a.card {
+        color: var(--dark);
+    }
+
+    #docs #docsButtons button img {
+        filter: invert(1);
     }
 }
 
